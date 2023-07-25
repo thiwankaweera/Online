@@ -1,32 +1,30 @@
 
 let user={
-    username:undefined,
+    userName:undefined,
     password:undefined
 }
 
 //Get submit button reference from DOM model
-let submitBtn=document.getElementById("btn-submit");
+let submitBtn = document.getElementById("btn-submit");
 
 //Get Username Text field reference from DOM model
-let userNametxt=document.getElementById("usre-name-txt");
+let userNametxt = document.getElementById("user-name-txt");
+
 
 //Get Password Text field reference from DOM model
-let pwtxt=document.getElementById("pw-txt");
+let pwtxt = document.getElementById("pw-txt");
 
+//Added click event listener to submi button
+submitBtn.addEventListener("click", () =>{
+    console.log(userNametxt.value);
+    console.log(pwtxt.value)
 
-//Added click event listener to submit button
-submitBtn.addEventListener("click",()=> {
-    user.username=userNametxt.value;
+    user.userName =userNametxt.value;
     user.password=pwtxt.value;
 
-    console.log(user);
+    console.log(user.toString());
 });
 
-let userName="ICET";
-let userAge=11;
-
-let address=undefined;
-//let city=null;
 
 
 
@@ -34,4 +32,5 @@ let address=undefined;
 
 
 
+ 
 
